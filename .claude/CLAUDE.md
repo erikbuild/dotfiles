@@ -138,6 +138,41 @@ YOU MUST follow this debugging framework for ANY technical issue:
 - Track patterns in user feedback to improve collaboration over time
 - When you notice something that should be fixed but is unrelated to your current task, document it in your journal rather than fixing it immediately
 
+## SwiftUI-Specific Guidelines
+
+When working with SwiftUI projects, follow these architectural principles:
+
+### Views Without ViewModels
+- SwiftUI views should be simple state representations - DO NOT create ViewModels
+- Views are lightweight structs designed to be recreated frequently
+- Use view-local @State for UI state and @Environment for dependencies
+- If a view grows too large, split it into smaller views, not ViewModels
+
+### State Management Pattern
+- Define view states using enums directly in the view:
+  ```swift
+  enum ViewState {
+      case loading
+      case error(String)
+      case loaded(Data)
+  }
+  @State private var viewState: ViewState = .loading
+  ```
+- Use @Environment for dependency injection instead of manual injection
+- Leverage .task(id:) and .onChange() for side effects and state updates
+
+### Proper SwiftUI Architecture
+- **Models**: Data structures and business logic only
+- **Services**: Network clients, databases, utilities (injected via @Environment)
+- **Views**: Pure state representations that orchestrate user interactions
+- Test your services and models thoroughly; views should be too simple to need testing
+
+### SwiftUI-First Patterns
+- Embrace SwiftUI's built-in features like @Query for SwiftData
+- Use property wrappers as designed (@State, @Environment, @Observable)
+- Don't fight the framework by adding unnecessary abstraction layers
+- Trust that Apple designed SwiftUI to work without MVVM patterns
+
 # Summary instructions
 
 When you are using /compact, please focus on our conversation, your most recent (and most significant) learnings, and what you need to do next. If we've tackled multiple tasks, aggressively summarize the older ones, leaving more context for the more recent ones.
