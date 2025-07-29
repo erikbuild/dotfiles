@@ -13,7 +13,9 @@ rm ~/.zshrc
 cd ~/
 git clone git@github.com:erikbuild/dotfiles.git
 ln -s dotfiles/.zshrc
-ln -s dotfiles/.claude/CLAUDE.md ~/.claude/CLAUDE.md
-ln -s dotfiles/.claude/commands ~/.claude/commands
+mkdir ~/.claude
+cd ~/.claude
+ln -s ~/dotfiles/.claude/CLAUDE.md
+ln -s ~/dotfiles/.claude/commands
 ```
 reload shell
