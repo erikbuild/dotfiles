@@ -1,5 +1,6 @@
-# CodeWhisperer pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
+# Q pre block. Keep at the top of this file.
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -104,19 +105,22 @@ alias gcb='git copy-branch-name'
 alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias gac='git add -A && git commit -m'
-alias ge='git-edit-new'
+alias ge='git-edit-new'export PATH="$HOME/rubyonmac:$PATH"
 
-# CodeWhisperer post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
+eval "$(nodenv init -)"
 
+alias python='python3'
+
+# Q post block. Keep at the bottom of this file.
 export PATH="$HOME/rubyonmac:$PATH"
 
 source "$(brew --prefix)/opt/chruby/share/chruby/chruby.sh"
 
 source "$(brew --prefix)/opt/chruby/share/chruby/auto.sh"
 
-chruby ruby-3.2.3
+chruby ruby-3.3.7
 
-eval "$(nodenv init -)"
+nodenv global 20.18.1
 
-nodenv global 20.11.1
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"

@@ -3,9 +3,9 @@
 install oh-my-zsh
 install homebrew
 brew install wget
+brew install direnv
 brew install git
 set git configs
-install direnv
 install ruby-on-mac ultimate
 install asdf (node, elixir, etc)
 ```
@@ -13,5 +13,6 @@ rm ~/.zshrc
 cd ~/
 git clone git@github.com:grumpymaker/dotfiles.git
 ln -s dotfiles/.zshrc
+ln -s dotfiles/.claude
 ```
 reload shell
