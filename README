@@ -11,7 +11,7 @@ install asdf (node, elixir, etc)
 ```
 rm ~/.zshrc
 cd ~/
-git clone git@github.com:grumpymaker/dotfiles.git
+git clone git@github.com:erikbuild/dotfiles.git
 ln -s dotfiles/.zshrc
 ln -s dotfiles/.claude
 ```
