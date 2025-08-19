@@ -114,6 +114,9 @@ alias python='python3'
 # Q post block. Keep at the bottom of this file.
 export PATH="$HOME/rubyonmac:$PATH"
 
+# Add Retro68K bin
+export PATH=/Users/erik/Code/Retro68-build/toolchain/bin:$PATH
+
 source "$(brew --prefix)/opt/chruby/share/chruby/chruby.sh"
 
 source "$(brew --prefix)/opt/chruby/share/chruby/auto.sh"
