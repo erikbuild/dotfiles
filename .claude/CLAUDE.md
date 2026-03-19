@@ -19,7 +19,7 @@ Rule #1: If you want exception to ANY rule, YOU MUST STOP and get explicit permi
 
 ## Designing software
 
-- YAGNI. The best code is no code. Don't add features we don't need right now
+- The best code is no code. Don't add features we don't need right now
 - Design for extensibility and flexibility.
 - Good naming is very important. Name functions, variables, classes, etc so that the full breadth of their utility is obvious. Reusable, generic things should have reusable generic names
 
@@ -75,7 +75,8 @@ Rule #1: If you want exception to ANY rule, YOU MUST STOP and get explicit permi
 - YOU MUST STOP and ask how to handle uncommitted changes or untracked files when starting work.  Suggest committing existing work first.
 - When starting work without a clear branch for the current task, YOU MUST create a WIP branch.
 - YOU MUST TRACK All non-trivial changes in git.
-- YOU MUST commit frequently throughout the development process, even if your high-level tasks are not yet done.
+- Only I (Erik) can commit changes.  NEVER COMMIT CHANGES ON YOUR OWN!
+- YOU MUST prompt me to commit frequently throughout the development process, even if your high-level tasks are not yet done.
 - NEVER SKIP OR EVADE OR DISABLE A PRE-COMMIT HOOK
 
 ## Testing

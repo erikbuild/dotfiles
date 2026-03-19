@@ -1,8 +1,15 @@
-# Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
-# Q pre block. Keep at the top of this file.
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Added by Ruby on Mac to make it easier to switch between native mode and Rosetta
+if [[ $(arch) == "i386" ]]; then
+  HOMEBREW_PREFIX=/usr/local
+  echo "\033[0;31mYour terminal is using Rosetta!\033[0m"
+else
+  HOMEBREW_PREFIX=/opt/homebrew
+fi
+
+eval $("$HOMEBREW_PREFIX/bin/brew" shellenv)
+# End of lines added by Ruby on Mac
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -11,20 +18,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
 ZSH_THEME="norm"
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -73,7 +67,7 @@ ZSH_THEME="norm"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git asdf direnv)
+plugins=(git direnv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,7 +105,6 @@ eval "$(nodenv init -)"
 
 alias python='python3'
 
-# Q post block. Keep at the bottom of this file.
 export PATH="$HOME/rubyonmac:$PATH"
 
 # Add Retro68K bin
@@ -124,6 +117,3 @@ source "$(brew --prefix)/opt/chruby/share/chruby/auto.sh"
 chruby ruby-3.3.7
 
 nodenv global 20.18.1
-
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"

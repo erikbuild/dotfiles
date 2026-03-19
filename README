@@ -7,7 +7,6 @@ brew install direnv
 brew install git
 set git configs
 install ruby-on-mac ultimate
-install asdf (node, elixir, etc)
 ```
 rm ~/.zshrc
 cd ~/
