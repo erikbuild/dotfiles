@@ -101,6 +101,10 @@ alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias gac='git add -A && git commit -m'
 alias ge='git-edit-new'export PATH="$HOME/rubyonmac:$PATH"
 
+## Named Directories
+hash -d fusion="$HOME/Library/Application Support/Autodesk/Autodesk Fusion 360/API/AddIns"
+hash -d positron3d="/volumes/data/Dropbox/Making/Positron3D"
+
 eval "$(nodenv init -)"
 
 alias python='python3'
@@ -117,3 +121,4 @@ source "$(brew --prefix)/opt/chruby/share/chruby/auto.sh"
 chruby ruby-3.3.7
 
 nodenv global 20.18.1
+export PATH="$HOME/.local/bin:$PATH"
