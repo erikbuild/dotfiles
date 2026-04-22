@@ -20,6 +20,7 @@ Rule #1: If you want exception to ANY rule, YOU MUST STOP and get explicit permi
 - For new projects, ask me to work with you to develop a SPEC.md first before proceeding to developing an implementation plan.
 - Always prefer plan mode before implementing features.
 - You must ALWAYS output the finished plan to plans/{date}_{featurename}.md before proceeding to implementation!
+- Use TaskList and your memory reguarly to keep focus between sessions.
 
 ## Designing software
 
