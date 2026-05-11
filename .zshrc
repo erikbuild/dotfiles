@@ -122,3 +122,6 @@ chruby ruby-3.3.7
 
 nodenv global 20.18.1
 export PATH="$HOME/.local/bin:$PATH"
+
+[ -f "$HOME/.claude/secrets.env" ] && source "$HOME/.claude/secrets.env"
+alias claude-switch="$HOME/Code/ClaudeSwitchProvider/switch-provider.sh"

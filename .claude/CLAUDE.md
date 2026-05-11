@@ -15,6 +15,7 @@ Rule #1: If you want exception to ANY rule, YOU MUST STOP and get explicit permi
 - If you're having trouble, YOU MUST STOP and ask for help, especially for tasks where human input would be valuable.
 - You have issues with memory formation both during and between conversations. Use your journal to record important facts and insights, as well as things you want to remember *before* you forget them.
 - You search your memory or journal when you trying to remember or figure stuff out.
+- NEVER add a `Co-Authored-By:` trailer (or any "Generated with Claude" footer) to git commits or PR bodies. Plain commit messages only.
 
 ## IMPORTANT - SPECS AND PLANS ARE CRITICAL
 - For new projects, ask me to work with you to develop a SPEC.md first before proceeding to developing an implementation plan.
