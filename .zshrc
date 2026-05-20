@@ -67,7 +67,7 @@ ZSH_THEME="norm"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git direnv)
+plugins=(git direnv uv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -118,10 +118,13 @@ source "$(brew --prefix)/opt/chruby/share/chruby/chruby.sh"
 
 source "$(brew --prefix)/opt/chruby/share/chruby/auto.sh"
 
-chruby ruby-3.3.7
+#chruby ruby-3.3.7
+#nodenv global 20.18.1
 
-nodenv global 20.18.1
 export PATH="$HOME/.local/bin:$PATH"
 
 [ -f "$HOME/.claude/secrets.env" ] && source "$HOME/.claude/secrets.env"
 alias claude-switch="$HOME/Code/ClaudeSwitchProvider/switch-provider.sh"
+
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh)"
